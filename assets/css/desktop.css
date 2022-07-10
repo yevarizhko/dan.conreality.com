@@ -4,12 +4,29 @@
         width: calc(100% - 48px);
     }
 }
+@font-face {
+    font-family: 'TT-Squares';
+    src: url(../fonts/TT-Squares-Regular.ttf)  format('truetype');
+    src: url(../fonts/TT-Squares-Regular.woff) format('woff');
+    src: url(../fonts/TT-Squares-Regular.woff2) format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'TT-Squares';
+    src: url(../fonts/TT-Squares-Bold.ttf)  format('truetype');
+    src: url(../fonts/TT-Squares-Bold.woff) format('woff');
+    src: url(../fonts/TT-Squares-Bold.woff2) format('woff2');
+    font-weight: bold;
+    font-style: bold;
+}
 
 body {
     margin: 0;
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'TT-Squares', Fallback, sans-serif;
     width: 100%;
-    background-color: #fafafa;
+    background-color: #111111;
 }
 
 .container {
@@ -66,7 +83,7 @@ body {
 }
 
 .logo {
-    font-family: 'Open Sans';
+    
     font-style: normal;
     font-weight: 700;
     font-size: 24px;
@@ -107,7 +124,7 @@ body {
     padding: 0px;
     gap: 4px;
 
-    font-family: 'Open Sans';
+    
     font-style: normal;
     font-weight: 600;
     font-size: 16px;
@@ -133,13 +150,13 @@ body {
     flex-direction: row;
     justify-content: flex-start;
     align-items: center;
-    gap: 40px;
+    gap: 60px;
 
     min-width: 0;
 
     /* White */
 
-    background: #FFFFFF;
+    background: #222222;
     box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.15);
 
     /* Inside auto layout */
@@ -189,15 +206,13 @@ body {
 .info h1 {
     margin-top: 80px;
     margin-bottom: 0;
-
-    font-family: 'Open Sans';
     font-style: normal;
     font-weight: 700;
     font-size: 40px;
     line-height: 54px;
     letter-spacing: 0.03em;
 
-    color: black;
+    color: white;
 
     flex: 1;
     order: 0;
@@ -209,7 +224,7 @@ body {
     margin-top: 20px;
     margin-bottom: 0;
 
-    font-family: 'Open Sans';
+    
     font-style: normal;
     font-weight: 400;
     font-size: 30px;
@@ -218,7 +233,7 @@ body {
 
     letter-spacing: 0.03em;
 
-    color: black;
+    color: white;
 
     flex: 1;
     order: 1;
@@ -226,11 +241,21 @@ body {
     flex-grow: 0;
 }
 
-.info p {
-    margin-top: 40px;
+.info ul {
+    padding: 0;
+    padding-right: 60px;
+
+    flex: 1;
+    order: 2;
+    align-self: stretch;
+    flex-grow: 0;
+}
+
+.info li {
+    margin-top: 30px;
     margin-bottom: 0;
 
-    font-family: 'Open Sans';
+    
     font-style: normal;
     font-weight: 400;
     font-size: 24px;
@@ -241,84 +266,7 @@ body {
 
     /* Text Grey */
 
-    color: #444444;
-
-
-    flex: 1;
-    order: 2;
-    align-self: stretch;
-    flex-grow: 0;
-}
-
-.buttons {
-    margin-top: 80px;
-    /* Auto layout */
-
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    gap: 20px;
-
-    flex: 1;
-    order: 3;
-    flex-grow: 0;
-}
-
-.buttons button {
-    /* Auto layout */
-
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    padding: 14px 36px;
-    gap: 10px;
-
-    min-width: 180px;
-    height: 60px;
-
-    /* Black */
-
-    background: #111111;
-    border-radius: 30px;
-    border: none;
-
-    font-family: 'Open Sans';
-    font-style: normal;
-    font-weight: 600;
-    font-size: 16px;
-    line-height: 200%;
-    /* identical to box height, or 32px */
-
-    letter-spacing: 0.03em;
-    text-transform: uppercase;
-
-    /* White */
-
-    color: #FFFFFF;
-
-
-}
-
-.buttons button:hover {
-    background: #333;
-    color: white;
-    cursor: pointer;
-
-}
-
-.buttons .button-outlined {
-    background: white;
-    color: #111111;
-    border: 2px solid #111111;
-
-}
-
-.buttons .button-outlined:hover {
-    background: white;
-    color: grey;
-    border: 2px solid grey;
-    cursor: pointer;
-
+    color: #C5C5C5;
 }
 
 .contact {
@@ -348,7 +296,7 @@ body {
 }
 
 .contact a {
-    font-family: 'Open Sans';
+    
     font-style: normal;
     font-weight: 400;
     font-size: 24px;
@@ -356,13 +304,13 @@ body {
     text-decoration: none;
     letter-spacing: 0.03em;
 
-    color: black;
+    color: white;
 }
 
 
 
 .contact a:hover {
-    color: #333;
+    color: #C5C5C5;
 }
 
 
@@ -384,7 +332,7 @@ body {
 }
 
 .copyright {
-    font-family: 'Open Sans';
+    
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
@@ -422,7 +370,7 @@ body {
 }
 
 .social a {
-    font-family: 'Open Sans';
+    
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
@@ -437,7 +385,7 @@ body {
 }
 
 .social a:hover {
-    color: black;
+    color: #C5C5C5;
 }
 
 .social i {

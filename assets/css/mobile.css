@@ -8,9 +8,28 @@
 @media only screen and (min-width: 1200px) {}
 
 
+@font-face {
+    font-family: 'TT-Squares';
+    src: url(../fonts/TT-Squares-Regular.ttf)  format('truetype');
+    src: url(../fonts/TT-Squares-Regular.woff) format('woff');
+    src: url(../fonts/TT-Squares-Regular.woff2) format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'TT-Squares';
+    src: url(../fonts/TT-Squares-Bold.ttf)  format('truetype');
+    src: url(../fonts/TT-Squares-Bold.woff) format('woff');
+    src: url(../fonts/TT-Squares-Bold.woff2) format('woff2');
+    font-weight: bold;
+    font-style: bold;
+}
+
+
 body {
     margin: 0;
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'TT-Squares', Fallback, sans-serif;
     background-color: #fafafa;
 }
 
@@ -63,7 +82,6 @@ body {
 }
 
 .logo {
-    font-family: 'Open Sans';
     font-style: normal;
     font-weight: 700;
     font-size: 20px;
@@ -75,59 +93,6 @@ body {
     white-space: nowrap;
 
     color: white;
-}
-
-.langs .desktop {
-    display: none;
-}
-
-.langs {
-    /* Auto layout */
-
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-    align-items: center;
-    padding: 0px;
-    gap: 16px;
-
-
-    /* Inside auto layout */
-
-    flex: none;
-    order: 1;
-    flex-grow: 0;
-}
-
-.langs a {
-    color: white;
-    text-decoration: none;
-
-    font-family: 'Open Sans';
-    font-style: normal;
-    font-weight: 600;
-    font-size: 16px;
-    line-height: 22px;
-    letter-spacing: 0.02em;
-    text-transform: uppercase;
-    color: white;
-}
-
-.langs .lang {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 0px;
-    gap: 4px;
-}
-
-.langs .lang .underline {
-    background-color: white;
-    height: 1px;
-    flex: none;
-    order: 1;
-    align-self: stretch;
-    flex-grow: 0;
 }
 
 .page {
@@ -189,7 +154,6 @@ body {
     margin-top: 0;
     margin-bottom: 0;
 
-    font-family: 'Open Sans';
     font-style: normal;
     font-weight: 700;
     font-size: 24px;
@@ -203,7 +167,6 @@ body {
     margin-top: 8px;
     margin-bottom: 0;
 
-    font-family: 'Open Sans';
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
@@ -215,15 +178,19 @@ body {
     color: #000000;
 }
 
-.info p {
+.info ul {
+    padding: 0;
+}
+
+.info li {
     margin-top: 16px;
     margin-bottom: 0;
 
-    font-family: 'Open Sans';
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
     line-height: 200%;
+    line-break: auto;
     /* or 32px */
 
     letter-spacing: 0.03em;
@@ -233,78 +200,6 @@ body {
     color: #444444;
 }
 
-.buttons {
-    margin-top: 24px;
-    /* Auto layout */
-
-    display: flex;
-    flex-direction: row;
-    justify-content: stretch;
-    align-items: stretch;
-    padding: 0px;
-    gap: 12px;
-}
-
-.buttons button {
-    /* Auto layout */
-
-    /* Auto layout */
-
-    display: flex;
-    flex-direction: row;
-    align-items: stretch;
-    padding: 8px 16px;
-    gap: 6px;
-
-    min-width: 120px;
-    height: 48px;
-
-    /* Black */
-
-    background: #111111;
-    border-radius: 30px;
-    border: none;
-
-    font-family: 'Open Sans';
-    font-style: normal;
-    font-weight: 600;
-    font-size: 14px;
-    line-height: 200%;
-    white-space: nowrap;
-    /* identical to box height, or 32px */
-
-    letter-spacing: 0.03em;
-    text-transform: uppercase;
-
-    /* White */
-
-    color: #FFFFFF;
-
-
-}
-
-.buttons button:hover {
-    background: #333;
-    color: white;
-    cursor: pointer;
-
-}
-
-.buttons .button-outlined {
-    background: white;
-    color: #111111;
-    border: 2px solid #111111;
-
-}
-
-.buttons .button-outlined:hover {
-    background: white;
-    color: grey;
-    border: 2px solid grey;
-    cursor: pointer;
-
-}
-
 .contact {
     margin: auto;
     margin-top: 32px;
@@ -312,7 +207,6 @@ body {
 }
 
 .contact .mail {
-    font-family: 'Open Sans';
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
@@ -337,7 +231,6 @@ body {
 }
 
 .contact a {
-    font-family: 'Open Sans';
     font-style: normal;
     font-weight: 400;
     font-size: 24px;
@@ -376,7 +269,6 @@ body {
 }
 
 .copyright {
-    font-family: 'Open Sans';
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
@@ -413,7 +305,6 @@ body {
 }
 
 .social a {
-    font-family: 'Open Sans';
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
